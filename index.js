@@ -2,10 +2,13 @@
 const generateMarkdown = require('./utils/generateMarkdown');
 const path = require('path');
 const inquirer = require('inquirer');
-const fsAsync - require('fs/promises');
+const fsAsync = require('fs/promises');
 
 // TODO: Create an array of questions for user input
-const questions = [
+
+
+// Needs Name, Title, License, Email, Github
+const prompts = [
     {
         type: 'input',
         name: 'title',
@@ -60,10 +63,29 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+
+// Creating readme.md file
+function writeToFile(fileName, data) {
+    fsAsync.writeFile(path.join(process.cwd(), fileName), data)
+};
+
+// Function using inquirer to prompt user for questions
+
+const askQuestions = () => {
+    inquirer.prompt(prompts).then((answers) => {
+        // Creating readme.md file using generate markdown's answers
+        writeToFile('readme.md', generateMarkdown({
+            ...answers
+        }))
+    })
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+
+// Initializing App
+function init() {
+
+}
 
 // Function call to initialize app
 init();

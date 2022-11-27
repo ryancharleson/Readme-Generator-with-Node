@@ -23,6 +23,9 @@ function renderLicenseSection(license) {
  }
 
 // TODO: Create a function to generate markdown for README
+
+
+// Function to display answers. Table of contents with links to answers.
 function generateMarkdown(data) {
   console.log(data)
   return `# ${data.title}
