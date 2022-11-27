@@ -84,8 +84,8 @@ const askQuestions = () => {
 
 // Initializing App
 function init() {
-
-}
+    askQuestions()
+};
 
 // Function call to initialize app
 init();
