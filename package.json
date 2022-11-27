@@ -1,23 +1,14 @@
 {
-  "name": "readme-generator-with-node",
+  "name": "static-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryancharleson/Readme-Generator-with-Node.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ryancharleson/Readme-Generator-with-Node/issues"
-  },
-  "homepage": "https://github.com/ryancharleson/Readme-Generator-with-Node#readme",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^6.3.1"
   }
 }
